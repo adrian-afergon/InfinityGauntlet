@@ -67,6 +67,21 @@ const infinityGauntlet = {
             }
         }
     },
+
+    snapFinger() {
+        if(this.powerStone.equipped &&
+            this.spaceStone.equipped &&
+            this.realityStone.equipped &&
+            this.mindStone.equipped &&
+            this.soulStone.equipped &&
+            this.timeStone.equipped) {
+
+            return 'Destroyed half of the population in the universe!'
+        } else {
+
+            return 'You need all the stones to perform this action!'
+        }
+    }
 };
 
 function equipAllStones() {
@@ -79,3 +94,4 @@ function equipAllStones() {
 }
 
 equipAllStones();
+
