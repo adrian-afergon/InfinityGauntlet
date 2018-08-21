@@ -94,4 +94,4 @@ function equipAllStones() {
 }
 
 equipAllStones();
-
+infinityGauntlet.snapFinger();
