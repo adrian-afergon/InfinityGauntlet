@@ -68,3 +68,14 @@ const infinityGauntlet = {
         }
     },
 };
+
+function equipAllStones() {
+    infinityGauntlet.mindStone.equipped = true;
+    infinityGauntlet.powerStone.equipped = true;
+    infinityGauntlet.realityStone.equipped = true;
+    infinityGauntlet.soulStone.equipped = true;
+    infinityGauntlet.spaceStone.equipped = true;
+    infinityGauntlet.timeStone.equipped = true;
+}
+
+equipAllStones();
