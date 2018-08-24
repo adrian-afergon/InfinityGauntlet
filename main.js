@@ -2,8 +2,8 @@ const infinityGauntlet = {
     powerStone: {
         info: 'Controls all of the power in the universe. It can be used to augment or inhibit any force.',
         equipped: false,
-        use() {
-            if (this.equipped) {
+        use () {
+            if(this.equipped) {
                 return 'Using super strength to crush the moon and throw it over to the Avengers!!';
             } else {
                 return 'No Power Stone!!';
@@ -11,7 +11,18 @@ const infinityGauntlet = {
 
         }
     },
+    spaceStone: {
+        equipped: false,
+        info: 'Limitless manipulation of space, allowing for teleportation, dimensional manipulation, creation of wormholes, etc.',
+        use () {
+            if(this.equipped) {
+                return 'Create a wormhole and transport from planet Titan to Wakanda in a minute!';
+            } else {
+                return 'No Power Stone!!';
+            }
 
+        }
+    }
     realityStone: {
         equipped: false,
         info: 'Locally or universally alters the natural laws of the universe to the wielders will.',
@@ -23,7 +34,28 @@ const infinityGauntlet = {
             }
         }
     },
-
+    mindStone: {
+        equipped: false,
+        info: 'Taps the user into the universal consciousness, allowing for unlimited manipulation of psionic powers including telepathy and telekinesis.',
+        use() {
+            if (this.equipped) {
+                return 'Know that my oponent Tony Stark is the most briliant person in the universe.';
+            } else {
+                return 'No mind stone!'
+            }
+        }
+    },
+    soulStone: {
+        equipped: false,
+        info: 'Limitless manipulation of souls both alive and dead also has shown to be able to evolve or devolve a beings physical self as well as their mental capacities.',
+        use() {
+            if (this.equipped) {
+                return 'Bring a person back from the dead, or extract information from them.';
+            } else {
+                return 'No soul stone!'
+            }
+        }
+    },
     timeStone: {
         equipped: false,
         info: 'Total control over all aspects of time including time travel, stopping time, slowing down or speed up flow of time and to accelerate or slow down aging.',
@@ -35,4 +67,31 @@ const infinityGauntlet = {
             }
         }
     },
+
+    snapFinger() {
+        if(this.powerStone.equipped &&
+            this.spaceStone.equipped &&
+            this.realityStone.equipped &&
+            this.mindStone.equipped &&
+            this.soulStone.equipped &&
+            this.timeStone.equipped) {
+
+            return 'Destroyed half of the population in the universe!'
+        } else {
+
+            return 'You need all the stones to perform this action!'
+        }
+    }
 };
+
+function equipAllStones() {
+    infinityGauntlet.mindStone.equipped = true;
+    infinityGauntlet.powerStone.equipped = true;
+    infinityGauntlet.realityStone.equipped = true;
+    infinityGauntlet.soulStone.equipped = true;
+    infinityGauntlet.spaceStone.equipped = true;
+    infinityGauntlet.timeStone.equipped = true;
+}
+
+equipAllStones();
+infinityGauntlet.snapFinger();
